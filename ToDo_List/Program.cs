@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using System.Text.Json;
+using System.IO;
 
 class Tarefa
 {
@@ -13,10 +15,12 @@ class Program
     static void Main()
     {
         int escolha = -1;
-        var tarefas = new List<Tarefa>();
+        var tarefas = CarregarTarefas();
 
         do
         {
+            atualizarTarefas(tarefas);
+
             Console.WriteLine("\n===== Lista de Tarefas =====");
             Console.WriteLine("1 - Adicionar Nova Tarefa");
             Console.WriteLine("2 - Excluir Tarefa Existente");
@@ -52,12 +56,25 @@ class Program
                     visualizarTarefas(tarefas);
                     break;
                 case 0:
-                Console.Clear();
+                    Console.Clear();
                     Console.WriteLine("Finalizando...");
                     break;
             }
 
         } while (escolha != 0);
+    }
+    
+    static void atualizarTarefas(List<Tarefa> tarefas)
+    {
+        var ident = new JsonSerializerOptions { WriteIndented = true};
+        string tarefasAtualizadas = JsonSerializer.Serialize(tarefas, ident);
+        File.WriteAllText("Tarefas.json", tarefasAtualizadas);
+    }
+
+    static  List<Tarefa> CarregarTarefas()
+    {
+        string arquivoJson = File.ReadAllText("Tarefas.json");
+        return JsonSerializer.Deserialize<List<Tarefa>>(arquivoJson) ?? new List<Tarefa>();
     }
 
     static void adicionarTarefa(List<Tarefa> tarefas)

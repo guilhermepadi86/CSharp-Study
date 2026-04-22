@@ -1,4 +1,14 @@
-{
-  "tarefa": "Tarefa1",
-  "tempoMedio": 5
-}
+[
+  {
+    "Task": "Arrumar a Cama",
+    "Time": 5
+  },
+  {
+    "Task": "Limpar Chao",
+    "Time": 15
+  },
+  {
+    "Task": "Lavar a Lou\u00E7a",
+    "Time": 10
+  }
+]
