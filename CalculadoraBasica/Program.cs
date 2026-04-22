@@ -77,9 +77,13 @@ class Program
     {
         if (b == 0)
         {
-            Console.WriteLine("Divisão por zero é impossivel");
+            Console.WriteLine("Divisão por zero é impossivel, retornando ao menu!");
         }
-        Console.WriteLine($"{a} / {b} = {a / b}");
+        else
+        {
+            Console.WriteLine($"{a} / {b} = {a / b}");
+        }
+        
     }
 }
 

@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "IoXE+XC7zKE=",
+  "dgSpecHash": "H5dtB2nohQw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\PAG5CT\\Documents\\CSharp-Study-main\\ToDo_List\\ToDo_List.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\guipa\\Documents\\CSharp-Study\\ToDo_List\\ToDo_List.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\guipa\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.26\\microsoft.netcore.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\guipa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.26\\microsoft.windowsdesktop.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\guipa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.26\\microsoft.aspnetcore.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\guipa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.26\\microsoft.netcore.app.host.win-x64.8.0.26.nupkg.sha512"
+  ],
   "logs": []
 }
